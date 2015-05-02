@@ -1,0 +1,120 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EdicionLugarActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#8eeef9c4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:id="@+id/textView"
+            android:textColor="#000"
+            android:layout_marginLeft="1.5mm"
+            android:textSize="11pt" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombre"
+            android:hint="algo que identifique el lugar"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección"
+            android:id="@+id/textView2"
+            android:textColor="#000"
+            android:textSize="11pt"
+            android:layout_marginLeft="1.5mm"
+            android:layout_margin="1.5mm" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/direccion"
+            android:hint="dirección del lugar"
+            android:inputType="textPostalAddress" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo:"
+                android:id="@+id/t_tipo"
+                android:textSize="11pt"
+                android:textColor="#000"
+                android:layout_margin="1.5mm" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono"
+            android:id="@+id/textView3"
+            android:textColor="#000"
+            android:textSize="11pt"
+            android:layout_marginLeft="1.5mm"
+            android:layout_margin="1.5mm" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/telefono"
+            android:hint="número de contacto"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Url"
+            android:id="@+id/textView4"
+            android:textColor="#000"
+            android:textSize="11pt"
+            android:layout_marginLeft="1.5mm"
+            android:layout_margin="1.5mm" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/url"
+            android:hint="página web"
+            android:inputType="textUri" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comentario"
+            android:id="@+id/textView5"
+            android:textColor="#000"
+            android:textSize="11pt"
+            android:layout_marginLeft="1.5mm"
+            android:layout_margin="1.5mm" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comentario"
+            android:hint="introduce tus notas" />
+    </LinearLayout>
+
+
+</ScrollView>

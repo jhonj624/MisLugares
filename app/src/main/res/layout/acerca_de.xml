@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplicación Mis Lugares"
+        android:id="@+id/textView6"
+        android:layout_gravity="center"
+        android:textColor="#ff1014ff"
+        android:textSize="18pt"
+        android:textStyle="normal"
+        android:textAlignment="center"
+
+        android:lines="2"
+        android:layout_marginTop="2mm"
+        android:gravity="center" />
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:layout_marginTop="3mm"
+        android:layout_gravity="fill_horizontal"
+        android:text="Este programa ha sido desarrollado como ejemplo en el curso de Android para demostrar cómo se pueden lanzar nuevas actividades desde la actividad principal.">
+    </TextView>
+
+</LinearLayout>
