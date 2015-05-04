@@ -21,13 +21,25 @@
             android:name=".EdicionLugarActivity"
             android:label="Edición Lugar">
 
-        </activity>
+            </activity>
         <!-- Se agrega la actividad para el Acerca De ... -->
         <activity android:name=".AcercaDe"
             android:label="Acerca De ..."
             android:theme="@android:style/Theme.Dialog" >
 
             </activity>
+
+        <!-- Se agrega la actividad para las preferencias... -->
+        <activity android:name=".Preferencias"
+            android:label="Preferencias">
+
+            </activity>
+
+        <!-- Se agrega la actividad para vistalugar... -->
+        <activity android:name=".VistaLugar"
+            android:label="Mostrar lugares">
+
+        </activity>
         
 
     </application>
