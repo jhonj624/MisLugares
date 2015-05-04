@@ -10,6 +10,11 @@
         android:icon="@android:drawable/ic_menu_preferences"
         android:orderInCategory="5"
         app:showAsAction="never"></item>
+    <item
+        android:title="Ver preferencias"
+        android:id="@+id/action_ver_preferencias"
+        android:orderInCategory="6"
+        app:showAsAction="never"></item>
 
     <item android:title="Acerca de..."
         android:id="@+id/acerca_de"
