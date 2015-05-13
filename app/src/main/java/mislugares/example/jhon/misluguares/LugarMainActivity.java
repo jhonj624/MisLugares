@@ -5,20 +5,40 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 /**
  * Created by jhon on 17/04/15.
  */
-public class LugarMainActivity extends ActionBarActivity {
+public class LugarMainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+
+    public BaseAdapter adaptador;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_lugares);
+        adaptador = new AdaptadorLugares(this);
+        /*adaptador = new ArrayAdapter(this,
+                R.layout.elemento_lista,
+                R.id.nombre,
+                Lugares.listaNombres());*/
+        ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(adaptador);
+        listView.setOnItemClickListener(this);
+    }
 
     // variables de vistas
     private Button bAcercaDe;
-    @Override
+   /* @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_lugares);
@@ -56,7 +76,7 @@ public class LugarMainActivity extends ActionBarActivity {
                 onAcercaDe(null);
             }
         });
-    }
+    }*/
 
 
     @Override
@@ -87,11 +107,19 @@ public class LugarMainActivity extends ActionBarActivity {
             return true;
         }
         if(id == R.id.menu_buscar){
-            lanzarVistaLugar(null);
+            onCrearLugar(null);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView parent,View vista,
+                               int posicion, long id){
+        Intent i = new Intent(this, VistaLugar.class);
+        i.putExtra("id", id);
+        startActivity(i);
     }
 
     // método para lanzar la aplicación usando el metodo directo onClick que no es muy recomendable

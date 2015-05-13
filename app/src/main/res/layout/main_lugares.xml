@@ -1,52 +1,11 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="30dp"
-    tools:context=".LugarMainActivity"
-    android:background="#FFFFF0">
-
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_marginBottom="20dp"
-        style="@style/EstiloTexto" />
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="false" />
+    </LinearLayout>
 
-    <Button android:id="@+id/mostrar_lugares"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/accion_mostrar"
-        style="@style/EstiloTexto.Botones" />
-
-    <Button android:id="@+id/crear_lugar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/accion_crear"
-        style="@style/EstiloTexto.Botones" />
-
-    <Button android:id="@+id/preferencias"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/accion_preferencias"
-        style="@style/EstiloTexto.Botones" />
-
-    <Button android:id="@+id/acercade"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/accion_acerca_de"
-        android:onClick="onAcercaDe"
-        style="@style/EstiloTexto.Botones" />
-
-    <Button android:id="@+id/salir"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/accion_salir"
-        android:gravity="center"
-        style="@style/EstiloTexto.Botones" />
-</LinearLayout>
